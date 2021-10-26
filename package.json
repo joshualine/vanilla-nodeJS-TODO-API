@@ -1,0 +1,19 @@
+{
+  "name": "vanilla-node-js-todo",
+  "version": "1.0.0",
+  "description": "A TODO app built without express framework",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node app.js",
+    "dev": "nodemon app.js"
+  },
+  "author": "Joshua Chinwendu",
+  "license": "MIT",
+  "devDependencies": {
+    "nodemon": "^2.0.14"
+  },
+  "dependencies": {
+    "uuid": "^8.3.2"
+  }
+}
