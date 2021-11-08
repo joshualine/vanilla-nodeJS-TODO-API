@@ -2,17 +2,37 @@ let todos = require('../data/todo.json');
 const { v4: uuidv4 } = require('uuid')
 const { writeDataToFile } = require('../utils/utils')
 
-function findAll() {
-  return new Promise((resolve, reject) => {
-    resolve(todos)
-  })
+// function findAll() {
+//   return new Promise((resolve, reject) => {
+//     resolve(todos)
+//   })
+// }
+
+async function findAll() {
+  try {
+    return todos;
+  } catch (error) {
+    console.log(error)
+  }
 }
 
-function findById(id) {
-  return new Promise((resolve, reject) => {
-    const todo = todos.find((t) => t.id === id)
-    resolve(todo)
-  })
+// function findById(id) {
+//   return new Promise((resolve, reject) => {
+//     const todo = todos.find((t) => t.id === id)
+//     resolve(todo)
+//   })
+// }
+
+
+
+async function findById(id) {
+  try {
+    const todo = todos.find((t) => t.id === id);
+    return todo;
+
+  } catch (error) {
+    console.log(error)
+  }
 }
 
 function createTodo(todo) {
